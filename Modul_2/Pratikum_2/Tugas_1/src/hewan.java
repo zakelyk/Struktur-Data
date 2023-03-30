@@ -37,7 +37,7 @@ public class hewan {
         hewan.add(2, "itik");
         System.out.println(hewan);
 
-        for(int i = 2;i<5;i++) {hewan.remove(i);}
+        for(int i = 2;i<5;i++) {hewan.remove(2);}
         System.out.println(hewan);
         System.out.println(hewan.get(0)+hewan.get(hewan.size()-1));
     }
