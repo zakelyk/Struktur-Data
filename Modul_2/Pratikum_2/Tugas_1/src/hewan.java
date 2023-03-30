@@ -35,8 +35,11 @@ public class hewan {
 
         hewan.set(0,"Ular");
         hewan.add(2, "itik");
+        System.out.println(hewan);
 
-
+        for(int i = 2;i<5;i++) {hewan.remove(i);}
+        System.out.println(hewan);
+        System.out.println(hewan.get(0)+hewan.get(hewan.size()-1));
     }
 
 
