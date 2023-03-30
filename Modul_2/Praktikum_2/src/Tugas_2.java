@@ -9,12 +9,6 @@ public class Tugas_2 {
         list.add(2);
         list.add(3);
 
-        System.out.print("before: ");
-        list.printList();
-
-        list.sort();
-
-        System.out.print("after : ");
         list.printList();
     }
 }

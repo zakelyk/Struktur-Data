@@ -38,7 +38,7 @@ public class Tugas_1 {
         hewan.add(2, "itik");
         System.out.println(hewan);
 
-        for(int i = 2;i<5;i++) {hewan.remove(2);}
+        for(int i = 2;i<=4;i++) {hewan.remove(2);}
         System.out.println(hewan);
         System.out.println(String.format("[%s, %s]", hewan.get(0), hewan.get(hewan.size()-1)));
         System.out.println("The index of \"Badak\" : " +hewan.indexOf("Badak"));
