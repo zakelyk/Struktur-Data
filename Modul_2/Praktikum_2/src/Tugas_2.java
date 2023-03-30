@@ -10,5 +10,6 @@ public class Tugas_2 {
         list.add(3);
 
         list.printList();
+
     }
 }
