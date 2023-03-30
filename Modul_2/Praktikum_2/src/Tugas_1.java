@@ -22,6 +22,7 @@ public class Tugas_1 {
                 posisi.add(i+1);
             }
         }
+
         System.out.println("Bebek = "+bebek);
         System.out.print("Posisi Index : ");
         System.out.println(posisi.toString().replace('[',' ').replace(']',' '));
