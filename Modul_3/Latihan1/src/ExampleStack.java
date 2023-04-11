@@ -2,8 +2,8 @@ import java.util.Stack;
 public class ExampleStack {
 
     public static void main(String[] args) {
-        Stack st = new Stack();
-//        myStack st = new myStack(5);
+//        Stack st = new Stack();
+        myStack st = new myStack(5);
 
         st.push("Aku");
         st.push("Anak");

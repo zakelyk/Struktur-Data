@@ -19,7 +19,12 @@ public class myStack{
     public Object pop() {
         return (Object) stackArray[top--];
     }
-    
+
+    public Object peek() {
+        return (Object) stackArray[top];
+    }
+
+
     public boolean empty() {
         return top == -1;
     }
