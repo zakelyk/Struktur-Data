@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Tugas_1 {
     public static void main(String[] args) {

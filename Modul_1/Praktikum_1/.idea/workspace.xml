@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7007a4c0-0dea-4cfc-8b8b-51fe1a03065b" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/../../Modul_3/Latihan1/out/production/Latihan1/ExampleStack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Modul_3/Latihan1/src/ExampleStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Modul_3/Latihan1/src/myStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Modul_2/Praktikum_2/out/production/Praktikum_2/LinkList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modul_2/Praktikum_2/out/production/Praktikum_2/LinkList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Modul_2/Praktikum_2/out/production/Praktikum_2/Tugas_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modul_2/Praktikum_2/out/production/Praktikum_2/Tugas_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Modul_2/Praktikum_2/src/Tugas_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modul_2/Praktikum_2/src/Tugas_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
