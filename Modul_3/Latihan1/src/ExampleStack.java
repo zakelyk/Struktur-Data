@@ -3,7 +3,7 @@ public class ExampleStack {
 
     public static void main(String[] args) {
 //        Stack st = new Stack();
-        myStack st = new myStack(5);
+        myStack st = new myStack();
 
         st.push("Aku");
         st.push("Anak");
