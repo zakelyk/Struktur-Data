@@ -14,7 +14,6 @@ public class MainQueue {
         System.out.println("peek : " +queue.peek());
     }
     public static void main(String[] args) {
-        MainQueue latihan2 = new MainQueue();
-        latihan2.queueExample();
+        new MainQueue().queueExample();
     }
 }
