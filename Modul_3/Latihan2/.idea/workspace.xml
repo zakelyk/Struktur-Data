@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d1396aa-4db2-4500-bfe4-e1fcfa814381" name="Changes" comment="" />
+    <list default="true" id="6d1396aa-4db2-4500-bfe4-e1fcfa814381" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Modul_2/Modul_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modul_2/Modul_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Latihan1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Latihan1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Latihan2/MainQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Latihan2/MainQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tugas1/src/ReverseStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tugas1/src/ReverseStack.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,13 +32,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
