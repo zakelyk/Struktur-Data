@@ -24,7 +24,7 @@ public class Main{
                             data.listNamaAsisten();
                             break;
                         case 5:
-                            data.totalEmail();
+                            System.out.println(data.totalEmail());
                             break;
                         case 6:
                             data.editData();

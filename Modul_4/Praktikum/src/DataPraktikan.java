@@ -2,8 +2,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class DataPraktikan {
-    private HashMap<String, String> tableData;
     Scanner input = new Scanner(System.in);
+    private HashMap<String, String> tableData;
 
     //Kegiatan 2---------------------------------------------------------------
     private HashMap<String, String> tabelSesiLogin;
@@ -13,10 +13,10 @@ public class DataPraktikan {
         System.out.print("Masukan Password\t: ");
         String passwd=input.nextLine();
         if(!tabelSesiLogin.containsKey(mail)){
-            System.out.println("Tak Terdaftar");
+            System.out.println("Email Tak Terdaftar");
             return false;
         } else if(!mail.endsWith("@umm.ac.id")){
-            System.out.println("Bukan dari email UMM(@umm.ac.id)");
+            System.out.println("Email bukan dari email UMM(@umm.ac.id)");
             return false;
         } else if(!tabelSesiLogin.get(mail).contains(passwd)){
             System.out.println("Password Salah");
