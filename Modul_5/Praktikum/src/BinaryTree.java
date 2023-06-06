@@ -47,7 +47,6 @@ public class BinaryTree {
 
     void preOrder(Node root) {
         if (root != null) {
-
             System.out.print(root.data + " ");
             preOrder(root.left);
             preOrder(root.right);
@@ -56,7 +55,6 @@ public class BinaryTree {
 
     void inOrder(Node root) {
         if (root != null) {
-
             inOrder(root.left);
             System.out.print(root.data + " ");
             inOrder(root.right);
@@ -67,7 +65,6 @@ public class BinaryTree {
         if (root != null) {
             postOrder(root.left);
             postOrder(root.right);
-
             System.out.print(root.data + " ");
         }
     }
