@@ -11,7 +11,7 @@ class Node{
 public class BinaryTree {
     Node root;
 
-    String space = " ";
+    String space = "";
 
     BinaryTree(){
         root=null;
@@ -40,8 +40,8 @@ public class BinaryTree {
     void printTree(Node root, String space){
         if(root != null){
             System.out.println(space+ root.data);
-            printTree(root.left, space+" ");
-            printTree(root.right, space+" ");
+            printTree(root.right, space+"     ");
+            printTree(root.left, space+"     ");
         }
     }
 
