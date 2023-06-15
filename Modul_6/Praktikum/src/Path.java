@@ -9,11 +9,13 @@ public class Path {
     private boolean visited[];
     private Queue<Integer> que;
     public Path(int vertex){
-        adj[vertex] = new LinkedList<>();
+        node = vertex;
+        adj = new LinkedList[node];
         visited = new boolean[vertex];
         for(int i=0;i < vertex; i++){
-            adj[vertex] = new LinkedList<>();
+            adj[i] = new LinkedList<>();
         }
+        que = new LinkedList<>();
     }
 
     void addEdge(int src, int dest){
@@ -74,19 +76,25 @@ public class Path {
     }
 
     public static void main(String[] args) {
-        Path graph = new Path(11);
-        graph.addEdge(0,1);
-        graph.addEdge(0,3);
-        graph.addEdge(0,4);
-        graph.addEdge(4,5);
-        graph.addEdge(3,5);
+        Path graph = new Path(12);
         graph.addEdge(1,2);
-        graph.addEdge(1,0);
+        graph.addEdge(1,4);
         graph.addEdge(2,1);
-        graph.addEdge(4,1);
-        graph.addEdge(3,1);
-        graph.addEdge(5,4);
+        graph.addEdge(2,5);
+        graph.addEdge(4,6);
+        graph.addEdge(5,2);
         graph.addEdge(5,3);
+        graph.addEdge(5,7);
+        graph.addEdge(5,9);
+        graph.addEdge(6,7);
+        graph.addEdge(7,6);
+        graph.addEdge(7,11);
+        graph.addEdge(9,5);
+        graph.addEdge(9,8);
+        graph.addEdge(8,9);
+        graph.addEdge(8,11);
+        graph.addEdge(11,10);
+        graph.addEdge(11,7);
 
         graph.connectedComponents();
     }
