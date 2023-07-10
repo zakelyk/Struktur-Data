@@ -1,102 +1,136 @@
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
-public class Path {
-    private LinkedList<Integer>[] adj;
-    private int node;
-    private boolean visited[];
-    private Queue<Integer> que;
-    public Path(int vertex){
-        node = vertex;
-        adj = new LinkedList[node];
-        visited = new boolean[vertex];
-        for(int i=0;i < vertex; i++){
-            adj[i] = new LinkedList<>();
+public class Path{
+    private HashMap<Integer, LinkedList<Integer>> adj;
+
+    Path(){
+        adj = new HashMap<>();
+    }
+
+    void addVertex(int vertex){
+        adj.put(vertex, new LinkedList<>());
+    }
+
+    void addDirect(int src, int dest){
+        if(!adj.containsKey(src)){
+            addVertex(src);
         }
-        que = new LinkedList<>();
-    }
-
-    void addEdge(int src, int dest){
-        adj[src].add(dest);
-    }
-
-    void DFSUtil(int v, boolean[] visited) {
-        visited[v] = true;
-        System.out.print(v + " ");
-
-        Iterator<Integer> it = adj[v].listIterator();
-        while(it.hasNext()){
-            int n = it.next();
-            if(!visited[n])
-                DFSUtil(n, visited);
+        if(!adj.containsKey(dest)){
+            addVertex(dest);
         }
+        adj.get(src).add(dest);
     }
 
-    void connectedComponents() {
-        boolean[] visited = new boolean[node];
+    void addUnDirect(int src, int dest){
+        if(!adj.containsKey(src)){
+            addVertex(src);
+        }
+        if(!adj.containsKey(dest)){
+            addVertex(dest);
+        }
+        adj.get(src).add(dest);
+        adj.get(dest).add(src);
+    }
 
-        for (int v = 0; v < node; ++v) {
-            if (!visited[v]) {
-                DFSUtil(v, visited);
-                System.out.println();
+    void printAdj(){
+        for(int vertex : adj.keySet()){
+            System.out.print("Vertex"+vertex+" is connected to: ");
+            List<Integer> connected = adj.get(vertex);
+            for(int connect : connected ){
+                System.out.print(connect+" ");
             }
+            System.out.println();
         }
     }
 
-    void DFS(int vertex){
-        visited[vertex] = true;
-        System.out.print(vertex + " ");
+    List<Integer> DFS(int startVertex){
+        List<Integer> visited = new ArrayList<>();
+        Stack<Integer> stack = new Stack<>();
 
-        Iterator<Integer> it = adj[vertex].listIterator();
-        while(it.hasNext()){
-            int n = it.next();
-            if(!visited[n])
-                DFS(n);
-        }
-    }
+        stack.push(startVertex);
 
-    void BFS(int n){
-        boolean nodes[] = new boolean[node];
-        int a=0;
-        nodes[n]=true;
-        que.add(n);
-        while ((que.size() != 0)){
-            n =que.poll();
-            System.out.print(n+" ");
-            for(int i = 0; i < adj[n].size();i++){
-                a=adj[n].get(i);
-                if (!nodes[a]){
-                    nodes[a]=true;
-                    que.add(a);
+        while (!stack.isEmpty()){
+            int currentVertex = stack.pop();
+            if(!visited.contains(currentVertex)){
+                visited.add(currentVertex);
+
+                List<Integer> adjacent = adj.get(currentVertex);
+                for (int neighbor : adjacent){
+                    if (!visited.contains(neighbor)){
+                        stack.push(neighbor);
+                    }
                 }
             }
-        }
+        } return visited;
+    }
+
+    List<Integer> BFS (int startVertex){
+        List<Integer> visited = new ArrayList<>();
+        Queue<Integer> queue = new LinkedList<>();
+
+        queue.offer(startVertex);
+
+        while (!queue.isEmpty()){
+            int currentVertex = queue.poll();
+
+            if(!visited.contains(currentVertex)){
+                visited.add(currentVertex);
+
+                List<Integer> adjacent = adj.get(currentVertex);
+                for (int neighbor : adjacent){
+                    if(!visited.contains(neighbor)){
+                        queue.offer(neighbor);
+                    }
+                }
+            }
+        } return visited;
     }
 
     public static void main(String[] args) {
-        Path graph = new Path(12);
-        graph.addEdge(1,2);
-        graph.addEdge(1,4);
-        graph.addEdge(2,1);
-        graph.addEdge(2,5);
-        graph.addEdge(4,6);
-        graph.addEdge(5,2);
-        graph.addEdge(5,3);
-        graph.addEdge(5,7);
-        graph.addEdge(5,9);
-        graph.addEdge(6,7);
-        graph.addEdge(7,6);
-        graph.addEdge(7,11);
-        graph.addEdge(9,5);
-        graph.addEdge(9,8);
-        graph.addEdge(8,9);
-        graph.addEdge(8,11);
-        graph.addEdge(11,10);
-        graph.addEdge(11,7);
+        Path graph = new Path();
 
-        graph.connectedComponents();
+        //add vertex
+        graph.addVertex(1);
+        graph.addVertex(2);
+        graph.addVertex(3);
+        graph.addVertex(4);
+        graph.addVertex(5);
+        graph.addVertex(6);
+        graph.addVertex(7);
+        graph.addVertex(8);
+        graph.addVertex(9);
+        graph.addVertex(10);
+        graph.addVertex(11);
+
+        //add Directed edges
+        graph.addDirect(1, 4);
+        graph.addDirect(4, 6);
+        graph.addDirect(5, 3);
+        graph.addDirect(5, 7);
+        graph.addDirect(8, 11);
+        graph.addDirect(11,10);
+
+        //add Unidrected edges
+//        graph.addEdgeDirect(1, 2);
+//        graph.addEdgeDirect(2, 5);
+//        graph.addEdgeDirect(5, 9);
+//        graph.addEdgeDirect(6, 7);
+//        graph.addEdgeDirect(9, 8);
+//        graph.addEdgeDirect(7, 11);
+
+        graph.addUnDirect(1, 2);
+        graph.addUnDirect(2, 5);
+        graph.addUnDirect(5, 9);
+        graph.addUnDirect(6, 7);
+        graph.addUnDirect(9, 8);
+        graph.addUnDirect(7, 11);
+
+        graph.printAdj();
+        List<Integer> bfs = graph.BFS(1);
+        System.out.println("BFS Traversal: " + bfs);
+
+        List<Integer> dfs = graph.DFS(1);
+        System.out.print("DFS Traversal: " + dfs);
+
     }
-
 }
